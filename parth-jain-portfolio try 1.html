@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parth Jain | Aerospace &amp; Mechanical Software Engineer</title>
+  
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config Customizations (Strict BMW M Palette Integration) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBg: '#000000',       // Deep cockpit backdrop
+            brandSurface: '#0d0d0d',  // Surface soft
+            brandMuted: '#2b2b2b',    // Carbon gray
+            brandBorder: '#3c3c3c',   // Hairline gray
+            brandAccent: '#0066b1',   // BMW M Light Blue
+            brandSuccess: '#0fa336',  // Green state
+            brandWhite: '#ffffff'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Menlo', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Framework overrides for strict mechanical layout rules */
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Elegant tech grid backdrop inspired by premium engineering editors */
+    .framer-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+
+    /* Ambient spotlight glow mapping directly to brand accent colors */
+    .spotlight {
+      background: radial-gradient(circle 800px at 50% -100px, rgba(0, 102, 177, 0.12), transparent 80%);
+    }
+
+    /* Micro-motion: pulsing radar indicators */
+    @keyframes radarPulse {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+    .radar-ring {
+      animation: radarPulse 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+
+    /* Continuous fluid animation for wind tunnel streamlines */
+    @keyframes streamlineFlow {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .flow-line {
+      stroke-dasharray: 12 6;
+      animation: streamlineFlow 4s linear infinite;
+    }
+
+    /* Highlight utility variables mapping strictly to the M-palette */
+    .border-hairline { border: 1px solid #3c3c3c; }
+    .m-radius { border-radius: 8px; }
+  </style>
+</head>
+<body class="framer-grid min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-brandAccent selection:text-brandWhite">
+
+  <!-- Fixed Glassmorphism Header Bar -->
+  <header class="sticky top-0 z-50 w-full px-6 py-4 border-b border-brandBorder/40 bg-brandBg/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo Indicator Block -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="flex space-x-1">
+          <span class="w-1.5 h-6 bg-brandAccent rounded-sm transition-transform duration-300 group-hover:scale-y-125"></span>
+          <span class="w-1.5 h-6 bg-brandWhite rounded-sm"></span>
+          <span class="w-1.5 h-6 bg-brandSuccess rounded-sm transition-transform duration-300 group-hover:scale-y-125"></span>
+        </div>
+        <div>
+          <span class="font-mono text-xs font-bold tracking-[0.25em] text-brandWhite group-hover:text-brandAccent transition-colors">PARTH JAIN</span>
+          <span class="block text-[8px] tracking-[0.3em] text-brandAccent font-mono">SYS.ENGINEER // AUTOMATION</span>
+        </div>
+      </a>
+
+      <!-- Quick-navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 text-[11px] font-mono tracking-widest text-brandWhite/70">
+        <a href="#about" class="hover:text-brandAccent transition-colors">01. PROFILE</a>
+        <a href="#projects" class="hover:text-brandAccent transition-colors">02. WORKSTATION</a>
+        <a href="#academics" class="hover:text-brandAccent transition-colors">03. ACADEMICS</a>
+        <a href="#interests" class="hover:text-brandAccent transition-colors">04. INTERESTS</a>
+        <a href="#contact" class="hover:text-brandAccent transition-colors">05. TERMINAL</a>
+      </nav>
+
+      <!-- Active Connection System Widget -->
+      <div class="flex items-center space-x-3 bg-brandSurface px-3 py-1.5 rounded-[8px] border border-brandBorder">
+        <div class="relative w-2 h-2">
+          <span class="absolute inset-0 rounded-full bg-brandSuccess radar-ring"></span>
+          <span class="absolute inset-0 rounded-full bg-brandSuccess"></span>
+        </div>
+        <span class="text-[10px] font-mono tracking-wider text-brandWhite">SYS.ACTIVE_RUN</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Spotlight & Live Physical Simulator -->
+  <section id="about" class="spotlight relative py-20 px-6 md:px-12 border-b border-brandBorder/40">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Left Hero Pitch -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Interactive Pill Tag -->
+        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-brandSurface border border-brandBorder rounded-[8px]">
+          <span class="w-1.5 h-1.5 rounded-full bg-brandAccent"></span>
+          <span class="text-[10px] font-mono tracking-widest text-brandAccent uppercase">MECH.ENGINEERING + COMPUTATION</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-brandWhite leading-none">
+          Hi, I'm <br class="hidden md:inline">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandWhite via-brandAccent to-brandAccent">Parth Jain</span>
+        </h1>
+
+        <p class="text-base md:text-lg text-brandWhite/70 font-normal leading-relaxed max-w-xl">
+          I specialize in building physics simulation software, thermodynamic calculators, and CAD automation tools. Merging classical mechanical analysis with direct scripting pipelines to optimize fluid flows and structural dynamics.
+        </p>
+
+        <!-- Technical KPI Badges -->
+        <div class="grid grid-cols-3 gap-4 py-4 border-t border-b border-brandBorder/40 max-w-lg">
+          <div>
+            <div class="text-[10px] font-mono text-brandAccent tracking-widest uppercase">CORE DOMAIN</div>
+            <div class="text-xs font-semibold mt-1">Aerospace Systems</div>
+          </div>
+          <div>
+            <div class="text-[10px] font-mono text-brandAccent tracking-widest uppercase">AERODYNAMICS</div>
+            <div class="text-xs font-semibold mt-1">OpenFOAM</div>
+          </div>
+          <div>
+            <div class="text-[10px] font-mono text-brandAccent tracking-widest uppercase">AUTOMATION</div>
+            <div class="text-xs font-semibold mt-1">Python &amp; C</div>
+          </div>
+        </div>
+
+        <!-- Social Connections & Primary Action Callout -->
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#projects" class="px-6 py-3 bg-brandAccent text-brandWhite text-xs font-bold tracking-widest rounded-[8px] hover:bg-brandWhite hover:text-brandBg transition-all duration-200 border border-brandAccent flex items-center space-x-2">
+            <span>ENTER WORKSTATION</span>
+            <span>↓</span>
+          </a>
+          <!-- Link to GitHub -->
+          <a href="https://github.com/parthjain-git" target="_blank" class="px-5 py-3 bg-brandSurface text-brandWhite text-xs font-bold tracking-widest rounded-[8px] hover:border-brandWhite transition-all border border-brandBorder flex items-center space-x-2">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+            <span>GITHUB</span>
+          </a>
+          <!-- Link to LinkedIn -->
+          <a href="https://linkedin.com/in/parth-jain-mechanical" target="_blank" class="px-5 py-3 bg-brandSurface text-brandWhite text-xs font-bold tracking-widest rounded-[8px] hover:border-brandWhite transition-all border border-brandBorder flex items-center space-x-2">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+            <span>LINKEDIN</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Fluid Dynamic Wind-Tunnel Simulation Console -->
+      <div class="lg:col-span-5 bg-brandSurface border border-brandBorder rounded-[8px] p-6 relative overflow-hidden shadow-2xl">
+        <div class="flex justify-between items-center pb-4 mb-4 border-b border-brandBorder/40">
+          <div class="flex items-center space-x-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-brandAccent"></span>
+            <span class="font-mono text-[10px] tracking-wider text-brandWhite/50">LIVE_WIND_TUNNEL.EXE</span>
+          </div>
+          <span class="font-mono text-[9px] text-brandSuccess bg-brandSuccess/10 px-2 py-0.5 rounded-[8px] border border-brandSuccess/20">60 FPS</span>
+        </div>
+
+        <!-- SVG Airfoil Wind Tunnel Visualizer -->
+        <div class="h-60 bg-black rounded-[8px] border border-brandBorder/40 relative flex items-center justify-center overflow-hidden">
+          
+          <!-- Axis coordinates backdrop -->
+          <div class="absolute inset-0 bg-grid-line opacity-10"></div>
+          <div class="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[1px] bg-brandAccent/10 border-dashed border-t"></div>
+          
+          <svg id="vector-field" class="absolute inset-0 w-full h-full" viewBox="0 0 400 240">
+            <!-- Animated fluid flow lines -->
+            <g stroke="#0066b1" fill="none" opacity="0.6">
+              <path id="stream-1" class="flow-line transition-all duration-300" d="M0,40 C100,40 180,20 220,50 T400,60" stroke-width="1.5"></path>
+              <path id="stream-2" class="flow-line transition-all duration-300" d="M0,120 C100,120 180,90 220,110 T400,120" stroke-width="2.5"></path>
+              <path id="stream-3" class="flow-line transition-all duration-300" d="M0,200 C100,200 180,160 220,180 T400,180" stroke-width="1.5"></path>
+            </g>
+            
+            <!-- Wing Profile Outline (Rotates and scales coordinates via JS) -->
+            <g id="airfoil-group" class="transition-transform duration-300 origin-[200px_120px]">
+              <!-- Solid mechanical wing silhouette -->
+              <path d="M140,120 C160,95 230,105 270,115 C230,122 170,125 140,120 Z" class="fill-brandMuted stroke-brandWhite" stroke-width="1.5"></path>
+              <!-- Trailing aerodynamic wake indicator -->
+              <path d="M270,115 L290,118" class="stroke-brandSuccess stroke-dashed" stroke-width="1.5"></path>
+            </g>
+          </svg>
+
+          <!-- Calculated Vector metrics overlay -->
+          <div class="absolute bottom-3 left-4 right-4 flex justify-between font-mono text-[9px] text-brandWhite/40 bg-brandSurface/90 p-2 rounded-[8px] border border-brandBorder/40">
+            <span>AoA: <span id="aoa-val" class="text-brandAccent">12°</span></span>
+            <span>LIFT COEFF (Cl): <span id="cl-val" class="text-brandAccent">1.14</span></span>
+            <span>DRAG COEFF (Cd): <span id="cd-val" class="text-brandSuccess">0.042</span></span>
+          </div>
+        </div>
+
+        <!-- Angle of Attack Controller -->
+        <div class="mt-4 space-y-2">
+          <div class="flex justify-between items-center text-[10px] font-mono text-brandWhite/70">
+            <span>ADJUST STAGNATION POINT (ANGLE OF ATTACK)</span>
+            <span class="text-brandAccent font-bold" id="slider-degree">12°</span>
+          </div>
+          <input type="range" id="aoa-control" min="-10" max="30" value="12" class="w-full accent-brandAccent h-1 bg-brandMuted rounded-lg cursor-pointer">
+          <p class="text-[9px] font-mono text-brandWhite/40 text-center leading-none mt-1">Updates lifting properties and boundary aerodynamic limits</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Core Workstation: 3-Column Portfolio Projects Grid -->
+  <section id="projects" class="py-24 px-6 md:px-12 border-b border-brandBorder/40 bg-brandSurface/30">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-brandBorder/40 pb-8">
+        <div class="space-y-2">
+          <div class="flex items-center space-x-2">
+            <span class="font-mono text-xs text-brandAccent">02. WORKSTATION</span>
+            <span class="w-4 h-[1px] bg-brandBorder"></span>
+            <span class="font-mono text-[10px] text-brandWhite/40">3 PORTFOLIO PROJECTS</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-brandWhite">Engineering Code &amp; Mechanics</h2>
+        </div>
+        <p class="text-xs font-mono text-brandWhite/50 max-w-md">
+          A showcase of physical systems translated into interactive programmatic tools. Tap below to run calculations.
+        </p>
+      </div>
+
+      <!-- 3-Column Interactive Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- PROJECT 1: Interactive eBAJA 2-Stage reduction Gearbox -->
+        <div class="bg-brandSurface border border-brandBorder rounded-[8px] p-6 flex flex-col justify-between hover:border-brandAccent transition-all duration-300 shadow-lg relative group">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-brandAccent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          
+          <div class="space-y-4">
+            <div class="flex justify-between items-start">
+              <span class="font-mono text-[10px] text-brandAccent tracking-wider">SAE_EBAJA_2027</span>
+              <span class="text-[10px] font-mono text-brandAccent bg-brandAccent/10 px-2 py-0.5 rounded-[8px] border border-brandAccent/20 font-bold uppercase tracking-wider animate-pulse">IN DEVELOPMENT</span>
+            </div>
+
+            <h3 class="text-xl font-bold tracking-tight text-brandWhite group-hover:text-brandAccent transition-colors">eBAJA 2-Stage Custom Gearbox</h3>
+            <p class="text-xs text-brandWhite/70 leading-relaxed">
+              Designed a high-torque two-stage reduction gearbox for the upcoming eBAJA 2027 off-road electric racer. Structured shaft shear calculations, spur gear mesh matrices, and custom aluminum casing geometry.
+            </p>
+
+            <!-- Interactive Gear Calculator Widget -->
+            <div class="bg-black/60 p-4 rounded-[8px] border border-brandBorder/60 space-y-3 font-mono">
+              <div class="flex justify-between items-center text-[9px] text-brandWhite/50">
+                <span>INPUT MOTOR RPM</span>
+                <span id="gear-rpm-val" class="text-brandWhite">2500 RPM</span>
+              </div>
+              <input type="range" id="gear-rpm" min="0" max="6000" step="100" value="2500" class="w-full accent-brandAccent h-1 bg-brandMuted rounded-lg cursor-pointer">
+              
+              <!-- Realtime rotating SVG gears -->
+              <div class="h-16 flex items-center justify-center space-x-4 overflow-hidden relative border border-brandBorder/40 rounded-[8px] bg-brandSurface/80 p-2">
+                
+                <!-- Stage 1 Gear -->
+                <div class="flex flex-col items-center">
+                  <svg id="gear-mesh-1" class="w-10 h-10 text-brandAccent transition-transform duration-100 ease-linear" viewBox="0 0 100 100" style="transform: rotate(0deg);">
+                    <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="4" stroke-dasharray="10, 5" fill="none"></circle>
+                    <line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="2"></line>
+                    <line x1="10" y1="50" x2="90" y2="50" stroke="currentColor" stroke-width="2"></line>
+                  </svg>
+                  <span class="text-[8px] text-brandWhite/50 mt-1">S1 (3.1:1)</span>
+                </div>
+
+                <!-- Reduction Vector -->
+                <span class="text-brandSuccess text-xs font-bold">→</span>
+
+                <!-- Stage 2 Gear (Rotates slower) -->
+                <div class="flex flex-col items-center">
+                  <svg id="gear-mesh-2" class="w-12 h-12 text-brandSuccess transition-transform duration-100 ease-linear" viewBox="0 0 100 100" style="transform: rotate(0deg);">
+                    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="4" stroke-dasharray="6, 4" fill="none"></circle>
+                    <line x1="50" y1="5" x2="50" y2="95" stroke="currentColor" stroke-width="2"></line>
+                    <line x1="5" y1="50" x2="95" y2="50" stroke="currentColor" stroke-width="2"></line>
+                  </svg>
+                  <span class="text-[8px] text-brandWhite/50 mt-1">S2 (2.88:1)</span>
+                </div>
+
+              </div>
+
+              <!-- Mathematical Outputs -->
+              &lt;</div></div></div></div></div></section></body></html>
